@@ -1,0 +1,70 @@
+<!DOCTYPE html> <!--shift + exclammation mark + enter = boiler plate template -->
+<html lang="en">
+<head>
+    <meta name="google-signin-client_id" content="581520203695-bkfkmqq06k4t01ern6d70bptt2botrkp.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Loginpage.css"> <!--rel tells relationship of linked document with html file-->
+    <title>LOGIN PAGE </title>
+</head>
+<body>
+    <div class="form"> <!--creates divison in the web page; it is a container containing specified tags; if any changes is made to div tag, all the changes get reflected on tags included in div tag -->
+
+        <div class="title">WELCOME</div>
+        <div class="subtitle"><h2>LOGIN</h2></div>
+        <div class="input-container first">
+            <input id="firstname" class="input" type="email" placeholder=" "/> <!--input tag helps to take input from the user;  as input type is text so it makes big box for the user to enter the text also, we can use input type as checkbox to have a box for ticking;  anything that we write in placeholder is shown in input type if it is text -->
+            <!--checkbox type of input don't need placeholder so, it doesnot write anything in placeholder , id attribute takes a unique value and used for internal linking-->
+            <!--we can use input type date time local to enter users bday or some dd mm yy format--> 
+            <div class="cut"></div> <!--we can use div to seperate label and input container by putting div in between..so first label appears and then input field ; div is a block level element so anything after div starts from new line -->
+            <label for="firstname" class="placeholder">E-mail address</label><!--we have given a label for id firstname using internal linking of label tag with id "firstname"-->
+             
+        </div>
+
+
+        <div class="input-container second">
+            <input id="lastname" class="input" type="text" placeholder=" "/><!--placeholder="Enter your last name" we can write it like to show this text inside the type choosen in the input tag;space in placeholder detects that there is no value in the placeholder-->
+            <div class="cut cut-short"></div>
+            <label for="lastname" class="placeholder"> Password </label>
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" placeholder=" "/>
+            Remember me  
+        </div>
+
+        <div class="forget">
+            <font color ="violet">Forget password?</font>
+        </div>
+
+        
+        <button type="submit" class="submit">LOGIN</button> <!-- button type="submit" inserts the data on the database if existed and button type="reset" used to clear data entered above from the database-->
+        
+        <div class="space"><font color ="white">Not registered yet?</font> <font color ="violet">Create an Account</font></div>
+    
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <div id="content"></div>
+    
+    
+
+ 
+ <script>
+  function onSignIn(googleUser){
+      var profile = googleUser.getBasicProfile()
+   console.log('User is '+ JSON.stringify(profile))
+   
+   
+   var element= document.querySelector('#content')
+   document.querySelector('#content').innerText= googleUser.getBasicProfile().getName();
+   
+   var image = document.createElement('img')
+   image.setAttribute('src',profile.getImageUrl())
+   element.append(image)
+   
+  }
+ </script>
+ </div>
+</body>
+</html>

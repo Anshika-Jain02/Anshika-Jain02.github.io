@@ -1,0 +1,164 @@
+body{
+    align-items: center; /* align the contents of flexbox to center vertically */
+    background-color: transparent;
+    display: flex; /* creates a flex box */
+    justify-content:center; /* align the contents of flexbox to center  horizontally */
+    height: 100vh; /*view port height(vh) tells that the background or the body should cover 100% of the available screen pixels (its length and width)*/
+}
+
+
+.form{
+    background-color:#15172b ;
+    border-radius: 20px; /* it changes radius of semi circle in border of the form */
+    box-sizing: border-box; /* tells that border and padding will also change accordingly as we change size of total form */
+    height: 500px;
+    padding: 20px; /* if one value is given in padding then it applies padding from all four sides */
+    width: 320px;
+}
+
+.title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;/* how much bold it will be */
+    margin-top: 30px; /* its padding size from the margin */
+  }
+
+  
+.subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 30px; /* its margin will start after welcome ends */ /* it is space from welcome(another text) to the border of subtitle */
+    text-align: center;
+  }
+  
+
+.input-container { /* applies for all text box like first name , second name etc*/
+    height: 50px;
+    position: relative; 
+    width: 100%;
+  }
+
+  
+.first { /* we need more margin for the first text box . (space from lets create and account till border of first name)*/
+    margin-top: 10px;
+  }
+
+  
+.second {
+    margin-top: 30px;
+  }
+  
+
+.input {/* for three text boxes*/
+    background-color: #303245;
+    border-radius: 12px;
+    border:0; /*1px solid green (we can use this inside border to create a border of given specifications)*/
+    box-sizing: border-box; /* tells that border and padding will also change accordingly as we change size of textbox in the form */
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;/* it is line outside border and has same format as border */
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+
+  
+.cut{ /*used */
+    background-color: #15172b;
+    border-radius: 20px; /* it changes radius of semi circle in border of the form */
+    height: 20px;
+    left: 20px; /* space it is leaving from left side */
+    position: absolute;
+    top: -20px; /* -20px means it will leave 20 size space from top of input field upwards and +20px would leave 20 size space downwards from top of input field */
+    transform: translateY(0px); /* it helps to shift the box or content to specified units into x axis or y axis*/
+    transition: transform 200ms;
+    width: 100px;
+  }
+  
+
+.cut-short {
+    width: 70px; /* it makes the width of the cut-short class as 50px; this class is used in input field of email*/
+  }
+
+   
+.input:focus ~ .cut, /* it selects only elements that can be focussed or clicked or typed on */ /*it goes to all .cut class elements below the elements that can be focussed */
+.input:not(:placeholder-shown) ~ .cut { /* there are two classes created here separated by comma where the given property is applied */
+    transform: translateY(8px); /* placeholder-shown means the properties when the placeholder is not active or selected ; in short it selects the input element which is having placeholder text*/
+    /* everywhere we have given placeholder text even if it is null; so, "not :placeholder-shown " selects all that values that doesnot have placeholder values inside all .cut below input  */
+  }
+  
+
+.placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+
+  
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+
+  
+.input:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+
+  
+.input:focus ~ .placeholder { /*it applies to all things having placeholder class inside input class and are currently being focussed */
+  /*if we are having cursor in input field or we are focussing on that input field then the colour changes to red */
+    color: #dc2f55;
+  }
+
+  
+.submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor:pointer; /* so when mouse brings there a pointer or hand appears */
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%; /* as we have given padding also so,it will be not 100% with respect to whole form even if we have wriiten  */
+  }
+
+  
+.submit:active {
+    background-color:#303245;/* when we click on it ; the colour becomes white */
+  }
+
+.space{
+   margin-top: 20px;
+   font-family:sans-serif ;
+   font-size: small;
+}  
+
+.checkbox{
+  margin-top: 10px;
+  color:#eee;
+  font-size:13px;
+  font-family: sans-serif;
+  display:inline;
+}
+
+.forget{
+  display:inline;
+  margin-left: 60px;
+  font-size:13px;
+  font-family: sans-serif;
+}
+
