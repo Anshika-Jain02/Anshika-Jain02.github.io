@@ -1,0 +1,109 @@
+body{ /* CSS Reset(resetting default properties so, that we can change them later as per our convenience) */
+    margin:0px;
+    padding:0px;
+    background-image: url('main photo.jpeg'); /* setting bg image */
+    background-size: 1350px ; /* for setting size of bg image*/
+    background-repeat: no-repeat; /* image will not repeat in both axis */
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.left{
+    display:inline-block;
+    position:absolute;
+    left:60px;
+    top:0px;
+    height:100px;
+} 
+
+.mid{
+    display:block;/* to center it using margin:auto property */
+    width:60%;
+    margin:30px auto;
+}
+
+.right{
+    display:inline-block;
+    position:absolute;
+    right:34px;
+    top:30px;
+}
+
+.navbar li{
+    display:inline-block;
+    font-size: 23px;
+}
+
+.navbar li a{
+    color:white;
+    text-decoration:none;
+    padding: 34px 23px;
+}
+
+.navbar li  a:hover,.navbar li a.active{ /* it applies to all <a> when we hover over it or to those <a> whose class is active */
+    text-decoration: underline;
+    color:rgb(184, 182, 182);
+}
+
+.left img{
+    width:111px;
+    height:89px;
+    filter: invert(100%);/* used to change the colour of black image to white and vice-versa*/
+}
+
+.left div{
+    text-align: center;
+    color:white; 
+    line-height: 0px;/*to reduce space between logo and text */
+    font-size:18px;
+
+}
+
+.btn{
+    margin: 0px 9px;
+    background-color: black;
+    color:white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor:pointer;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.btn:hover{
+    background-color: rgb(121, 117, 117);
+}
+
+.container{
+    border:2px solid white;
+    margin: 120px 70px;
+    padding: 75px;
+    width: 27%;
+    height:240px;
+    border-radius:28px;
+    color:white;
+}
+
+.form-group input{
+    text-align: center;
+    display:block;
+    width:350px;
+    padding:1px;
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 8px;
+    margin: 11px auto;
+    font-family: 'Balsamiq Sans', cursive;
+    background-color: rgb(233, 231, 231);
+}
+
+.container h1{
+    text-align: center;
+    font-size: 24px;
+}
+
+.container button{
+    display:block;
+    width:63%;
+    margin:20px auto;
+}
