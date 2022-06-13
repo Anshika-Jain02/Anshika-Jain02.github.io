@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png"/> <!--for adding logo in title-->
+    <title>Facebook - log in or sign up</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mt-32 flex margin-auto justify-center items-center"> <!--"mx-auto" is used to center container from all directions and justify-content and align-items center flex items within container-->
+        <div class="left w-[600px] mx-5 pt-8 h-80 relative"> <!--mx-14 gives margin between left and right div-->
+            <img class="w-72 pl-1" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="fb logo">
+            <p class="text-3xl mx-7 tracking-tight absolute top-[120px]">Facebook helps you connect and share with the people in your life.</p>
+        </div>
+
+        <!-- box-shadow gives rectangular shadow behind element's entire box while drop-shadow gives shadow of irregular objects also and gives shadow having same shape as of object(or creates shadow of non-transparent parts of image)and gives shadow to :before and :after pseudoelements also-->
+        <div class="right flex flex-col bg-white px-4 pt-2 rounded-lg w-[400px] h-[350px] text-lg relative"> <!--"flex-col" is used to make flex-direction as column;"relative" is used to meke its position relative; "drop-shadow" is used to give shadow effect around container-->
+            <input class="px-4 h-12 my-2 border border-1 border-gray-200 rounded-lg focus:outline outline-1 outline-blue-400"type="text" placeholder="Email address or phone number">
+            <input class="px-4 h-12 my-2 border border-1 border-gray-200 rounded-lg focus:outline outline-1 outline-blue-400"type="password" placeholder="Password">
+
+            <button class="bg-blue-500 text-white my-2 py-3 rounded-md font-bold text-xl cursor-pointer hover:bg-blue-600">Log In</button> <!--"font-bold" is used to bold the text-->
+
+            <span class="text-blue-600 text-center text-sm my-2 cursor-pointer hover:underline">Forgotten password?</span>
+
+            <hr class="my-2">
+
+            <button class="bg-lime-600 hover:bg-lime-700 text-white my-5 py-3 rounded-md font-bold text-base cursor-pointer px-4 mx-auto w-fit">Create New Account</button>
+            <span class="absolute -bottom-11 text-sm ml-5 "><b class="cursor-pointer hover:underline">Create a Page</b> for a celebrity, brand or business.</span> <!--we have made it absolute to take it out of flow and given negative bottom to take it out of container(as container in which this span is present is relative so, it will shift in bottom relative to original position of bottom of container) -->
+        </div>
+    </div>  
+</body>
+</html>

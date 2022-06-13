@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <title>Microsoft - Cloud, Computers, Apps &amp; Gaming</title> <!--&amp; used to display "&" without any errors-->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="navbar flex justify-between items-center p-1 md:p-4 mx-auto md:mx-5 lg:mx-16"> <!--gives p-4 so that space comes from edges of webpage(space outside navbar); justify-between is used to add equal spaces between two flex items but don't add space in starting and end from border so, every flex item comes in its respective position automatically; mx-auto automatically adjusts or increases mx as screen size increases--> 
+        <div class="flex justify-center items-center md:order-2"><!--we have done it so, that navbar has 3 sections with equal space in between using justify-between and where 1st section has two parts(hamburger and search)-->
+            <div class="hamburger p-4 cursor-pointer md:hidden"><!--p-4 is used to give padding inside navbar; it will hide when md breakpoint hits due to "md:hidden"-->
+                <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                <div class="line h-0.5 w-6 my-1 bg-black"></div>
+            </div>
+            <div class="search md:hidden w-4 mr-2 ml-2"><img src="images/seachicon.svg" alt=""></div> <!--it gets hidden when md breakpoint hits-->
+        </div>
+
+        <div class="logo md:order-1 flex">
+            <div class="w-28 p-[2px] mb-1"><img src="images/microsoft.png" alt="Microsoft logo"></div> <!--Microsoft logo-->
+            <div class="features w-fit absolute md:static inset-0 bg-gray-200 md:bg-white md:flex md:whitespace-nowrap md:items-center md:mr-10 md:ml-5 lg:mx-10 md:space-x-7 -translate-x-96 md:translate-x-0"><!--space-x-2 will give margin of 2 in x-axis to all child elements and mx-4 gives the whole feature div margin from Microsoft and search cart icon; inset-0 makes margin and padding 0px from all directions and as his parent container is static so, it follows <html> w.r.t margins etc; -translate-x-96 is used to translate in -x axis-->
+            <!--w-fit makes container width equal to content size/width ; we have done translate here to hide it normally by sending it very left of x axis and bring it back when md breakpoint hits-->
+                <div class="fitem text-sm hover:underline hover:underline-offset-4 decoration-2 cursor-pointer">Microsoft 365</div> <!--underline-offset is used to tell distance of underline from text above it; decoration-2 is used to tell width of underline(text-decoration)-->
+                <div class="fitem text-sm hover:underline hover:underline-offset-4 cursor-pointer decoration-2">Office</div>
+                <div class="fitem text-sm hover:underline hover:underline-offset-4 cursor-pointer decoration-2">Windows</div>
+                <div class="fitem text-sm hover:underline hover:underline-offset-4 cursor-pointer decoration-2">Surface</div>
+                <div class="fitem text-sm hover:underline hover:underline-offset-4 cursor-pointer decoration-2">Xbox</div>
+                <div class="fitem text-sm hover:underline hover:underline-offset-4 cursor-pointer decoration-2">Support</div>
+            </div>    
+        </div> <!--"md:order-1" is used so, that when breakpoint hits it will swap its place and becomes 1 element in navbar, second will be search and 3rd will be cart-->
+
+        <div class="cart md:order-3 flex items-center">
+            <div class="search hidden md:block mr-2 text-sm cursor-pointer hover:underline hover:underline-offset-4 decoration-2 md:whitespace-nowrap">All Microsoft</div> <!--it gets displayed when md breakpoint hits otherwise it is hidden; whitespace-nowrap is used so that text doesnot wrap in next line in its container when page size decreases-->
+            <img class="w-4 mr-2 ml-2 hidden md:inline cursor-pointer" src="images/seachicon.svg" alt=""> 
+            <div class="flex">
+                <img class="mx-3 mr-7 md:mr-4 cursor-pointer" src="images/cart.svg" alt=""> 
+                <img class="cursor-pointer mr-2" src="images/account.svg" alt="">
+            </div>
+        </div>
+    </div> 
+    
+    <div class="slider flex flex-col-reverse md:flex-row"> <!--flex-col-reverse as right is coming above left container-->
+        <div class="left flex flex-col justify-center md:bg-[#f2f2f2] py-7 md:h-[36rem]"> <!--we made it a flexbox for justify-center and as default is flex-row so we need to make it flex-col; md:h-[36rem] is used shorten the height a little bit and to shift the whole left container with text a little upwards -->
+            <button class="bg-[#ffb900] w-14 md:ml-28 mx-5 font-semibold mb-3 p-[3px]">New</button> <!--p-[3px] to heighten the button a lit much-->
+            <h1 class="text-3xl md:text-4xl mx-5 md:ml-28 font-semibold md:w-72">Surface Laptop Go 2</h1>
+            <p class="mb-5 mx-5 my-5 md:ml-28 md:w-72">A sleek laptop with a 12.4-inch touchscreen, great typing experience and improved HD camera</p>
+            <button class="text-white bg-[#0067b8] hover:bg-blue-700 font-semibold py-2 md:ml-28 w-28 mx-5">Learn more</button>
+        </div>
+
+        <div class="right md:h-[36rem] md:w-[60rem]">
+            <img class=" md:h-full md:w-full" src="images/main image.jpg" alt="Surface Laptop Go 2"><!--h-[28rem] w-full;h-[30rem] w-[41rem]-->
+        </div>
+    </div> 
+    
+    <div class="navigator flex justify-center mt-3 space-x-2">
+        <div class="cursor-pointer hover:-translate-x-2 hover:duration-500"><img src="images/leftarrow.png" alt=""></div> <!--duration-500 is transition property which is used to smoothen translate action by completing that action in a bigger time -->
+        <div class="py-3"><img src="images/middledots.png" alt=""></div>
+        <div class="py-1 cursor-pointer hover:translate-x-2 hover:duration-500"><img src="images/rightarrow.png" alt=""></div>
+    </div>
+
+    <div class="promo flex flex-wrap justify-center md:my-8"> <!--justify center to make them horizontally center the items and my-28 to give space from above section when md breakpoint hits; flex-wrap is used to wrap these items to next line when page size decreases-->
+        <div class="item flex flex-col items-center mx-6 my-7"> <!--mx-4 is given for spacing of whole item from other item and my-7 given for space between lower and upper elements when flex-wrap occurs; flex-col is done so, that in every item image and text comes in two consecutive columns-->
+            <img src="images/promo1.jpg" alt="">
+            <span class="text-[#0067b8] font-semibold underline my-2">Choose your Microsoft 365</span><!--you can match color with website u are cloning using colour picker-->
+        </div>
+
+        <div class="item flex flex-col items-center mx-6 my-7">
+            <img src="images/promo2.jpg" alt="">
+            <span class="text-[#0067b8] font-semibold underline my-2">Explore Surface devices</span>
+        </div>
+
+        <div class="item flex flex-col items-center mx-6 my-7">
+            <img src="images/promo3.jpg" alt="">
+            <span class="text-[#0067b8] font-semibold underline my-2">Buy Xbox games</span>
+        </div>
+
+        <div class="item flex flex-col items-center mx-4 my-7">
+            <img src="images/promo1.jpg" alt="">
+            <span class="text-[#0067b8] font-semibold underline my-2">Get Windows 11</span>
+        </div>
+    </div>
+</body>
+</html>
