@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="flipkart.png" rel="icon" type="image/x-icon" /> <!--for flipkart icon at title-->
+    <title>Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!</title>
+    <link rel="stylesheet" href="flipkart.css"> <!--adding css sheet for some css properties-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--for adding customised font family-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="border-2 border-red-700 border-solid">
+        <nav class="bg-[#2874f0] flex flex-col md:flex-row items-center justify-center md:h-14">
+            <div class="logo justify-center my-[12px] cursor-pointer">
+                <img class="w-44 md:w-24" src="images/flipkartlogo.png" alt="">
+            </div>
+            <ul class="flex justify-center md:justify-start items-center h-[42px] md:h-[58px]">
+                <li class="list-none px-6 py-6"><a class="text-white font-Lato hover:font-bold text-xl md:text-base" href="home.html">Home</a></li>
+                <li class="list-none px-6 py-6"><a class="text-white font-Lato hover:font-bold text-xl md:text-base" href="about.html">About</a></li>
+                <li class="list-none px-6 py-6"><a class="text-white font-Lato hover:font-bold text-xl md:text-base" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="searchbar justify-center"> <!--use vw and vh for responsiveness; using these u can make website responsive without using media queries or breakpoints-->
+                <input class="w-[70vw] md:w-[30vw] h-9 rounded-sm p-4 text-sm font-[500]" type="text" placeholder="Search for products, brands and more">
+                <button class="bg-white w-[4rem] md:w-[7.5rem] h-7 ml-4 font-[645] text-[#2874f0]">Login</button> <!--setting customised font-weight-->
+            </div>
+        </nav> 
+    </header>
+
+    <main class="container mx-auto"> <!--bringing container at center from left and right-->
+        <div class="slider w-[80vw] mx-auto my-[12px] overflow-hidden">  <!--bringing slider inside container at center from left and right and setting its width as required-->
+            <img src="https://source.unsplash.com/1600x500/?shopping, ecommerce" alt=""> <!--adding dynamic images-->
+        </div>
+
+        <!--**OVERFLOW-SCROLL can be used to make a scroll bar to view overflowing items by scrolling using that scroll bar-->
+        <div class="card overflow-scroll md:overflow-hidden my-9">
+            <h2 class="Roboto my-5 font-medium text-2xl md:text-xl">Join the cricket fun</h2>
+            <div class="cards flex space-x-5">
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?cricket" alt="">
+                    <div class="lines w-40 flex flex-col items-center"> <!--adjusting its width to image width to make text center acc to image-->
+                        <p class="my-1">Cricket Bats</p>
+                        <p class="my-1">Min 20% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+    
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?cricket,ball" alt="">
+                    <div class="lines w-40 flex flex-col items-center"> 
+                        <p class="my-1">Cricket Bats</p>
+                        <p class="my-1">Min 20% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+    
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?cricket,bat" alt="">
+                    <div class="lines w-40 flex flex-col items-center"> 
+                        <p class="my-1">Cricket Bats</p>
+                        <p class="my-1">Min 20% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?cricket,stumps" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Cricket Bats</p>
+                        <p class="my-1">Min 20% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?cricket,keeping" alt="">
+                    <div class="lines w-40 flex flex-col items-center"> 
+                        <p class="my-1">Cricket Bats</p>
+                        <p class="my-1">Min 20% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?cricket,field" alt="">
+                    <div class="lines w-40 flex flex-col items-center"> 
+                        <p class="my-1">Cricket Bats</p>
+                        <p class="my-1">Min 20% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?cricket,players" alt="">
+                    <div class="lines w-40 flex flex-col items-center"> 
+                        <p class="my-1">Cricket Bats</p>
+                        <p class="my-1">Min 20% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="card overflow-scroll md:overflow-hidden my-9"> <!--hiding the overflow if any image leaks out of this row-->
+            <h2 class="Roboto my-5 font-medium text-2xl md:text-xl">Furniture Bestsellers</h2>
+            <div class="cards flex space-x-5">
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?furniture" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Home Furniture</p>
+                        <p class="my-1">Min 40% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+    
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?furniture,home" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Home Furniture</p>
+                        <p class="my-1">Min 40% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+    
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?tables,chair" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Home Furniture</p>
+                        <p class="my-1">Min 40% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?antique,furniture" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Home Furniture</p>
+                        <p class="my-1">Min 40% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?furniture,old" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Home Furniture</p>
+                        <p class="my-1">Min 40% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?furniture,trendy" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Home Furniture</p>
+                        <p class="my-1">Min 40% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?furniture,new" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Home Furniture</p>
+                        <p class="my-1">Min 40% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="card overflow-scroll md:overflow-hidden my-9">
+            <h2 class="Roboto my-5 font-medium text-2xl md:text-xl">Best Battery Phones</h2>
+            <div class="cards flex space-x-5">
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?phone,battery" alt="">
+                    <div class="lines w-40 flex flex-col items-center"> 
+                        <p class="my-1">Mobile Phones</p>
+                        <p class="my-1">Min 30% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+    
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?phone" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Mobile Phones</p>
+                        <p class="my-1">Min 30% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+    
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?phone,charging" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Mobile Phones</p>
+                        <p class="my-1">Min 30% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?mobilephones" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Mobile Phones</p>
+                        <p class="my-1">Min 30% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?telephone" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Mobile Phones</p>
+                        <p class="my-1">Min 30% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?samsung, phones" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Mobile Phones</p>
+                        <p class="my-1">Min 30% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+
+                <div class="card-item">
+                    <img src="https://source.unsplash.com/160x160/?iphone" alt="">
+                    <div class="lines w-40 flex flex-col items-center">
+                        <p class="my-1">Mobile Phones</p>
+                        <p class="my-1">Min 30% off</p>
+                        <p class="my-1">Grab Now!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-black text-white h-[12vh] flex justify-center items-center">
+        <p class="font-Lato text-lg md:text-base">Copyright &copy; MyCart.com</p>
+    </footer> 
+</body>
+</html>
